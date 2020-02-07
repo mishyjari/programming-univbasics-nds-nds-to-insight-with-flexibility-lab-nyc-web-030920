@@ -118,6 +118,7 @@ def movies_with_directors_set(source)
 
     source_i += 1  
   end
+  puts output
   output
 end
 
