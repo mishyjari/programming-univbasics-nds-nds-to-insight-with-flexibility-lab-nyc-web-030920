@@ -112,10 +112,14 @@ def movies_with_directors_set(source)
     name = source[source_i][:name]
     movies = source[source_i][:movies]
 
-    director_hash = [{ :director_name => name, :movies => movies }]
+    movie_i = 0
+    while movie_i < movies.length do 
+      movies[movie_i][:director_name] = name
+      movie_i += 1
+    end
     
-    output << director_hash
-
+    output << movies
+    
     source_i += 1  
   end
 
